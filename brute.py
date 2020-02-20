@@ -55,15 +55,17 @@ if __name__ == "__main__":
         lib.books = sorted(lib.books, key=lambda book: input.dict_books[book].score, reverse=True)
     for i in range(64):
         pp = []
-        for j in range(10):
+        for j in range(1000):
             pp.append(np.random.permutation(input.libraries).tolist())
         t = multiprocessing.Process(target=worker, args=(pp, i, return_dict))
         jobs.append(t)
         t.start()
     for p in jobs:
         p.join()
-    sorted = sorted(return_dict.values())
-    output_libs = return_dict.values()[0][1]
+
+    sorted_value = sorted(return_dict.values(), reverse=True)
+    print(sorted_value[0][0])
+    output_libs = sorted_value[0][1]
     # print(len(output_libs))
     # for l in output_libs:
     #     if len(l.output) == 0:

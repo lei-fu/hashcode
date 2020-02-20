@@ -1,8 +1,10 @@
 class Library:
-    def __init__(self, books, duration, limits):
+    def __init__(self, id, books, duration, limits):
+        self.id = id
         self.books = books
         self.duration = duration
         self.limits = limits
+        self.output = []
     def __str__(self):
         s = ""
         for i in self.books:

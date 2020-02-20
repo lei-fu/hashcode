@@ -29,8 +29,11 @@ if __name__ == "__main__":
         output_libs.append(l)
         if day > input.num_days:
             break
+    output_libs = [lib for lib in output_libs if len(lib.output) > 0]
     print(len(output_libs))
     for l in output_libs:
+        if len(l.output) == 0:
+            continue
         print(l.id, len(l.output))
         for i in l.output:
             print(i, end=" ")

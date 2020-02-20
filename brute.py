@@ -55,7 +55,7 @@ if __name__ == "__main__":
         lib.books = sorted(lib.books, key=lambda book: input.dict_books[book].score, reverse=True)
     for i in range(64):
         pp = []
-        for i in range(40):
+        for j in range(10):
             pp.append(np.random.permutation(input.libraries).tolist())
         t = multiprocessing.Process(target=worker, args=(pp, i, return_dict))
         jobs.append(t)

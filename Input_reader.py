@@ -2,7 +2,7 @@ from Reader import Reader
 from Book import Book
 from Library import Library
 
-class Input:
+class Input_reader:
     def __init__(self, file_name):
         file = Reader(file_name)
         self.num_books, self.num_libraries, self.num_days = file.nextInt(), file.nextInt(), file.nextInt()

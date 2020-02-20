@@ -53,7 +53,7 @@ if __name__ == "__main__":
     sorted_books = sorted(input.books, key=lambda book: book.score, reverse=True)
     for lib in input.libraries:
         lib.books = sorted(lib.books, key=lambda book: input.dict_books[book].score, reverse=True)
-    for i in range(16):
+    for i in range(64):
         pp = []
         for i in range(40):
             pp.append(np.random.permutation(input.libraries).tolist())

@@ -1,10 +1,10 @@
 import numpy as np
 import sys
+from Reader import Reader
+from Book import Book
+from Library import Library
 
 
 if __name__ == "__main__":
-    with open(sys.argv[1]) as f:
-        lines = f.readlines()
-        content = [line.strip() for line in lines] 
-        for s in content:
-            print(s)
+    file = Reader(sys.argv[1])
+    print(file.nextInt())

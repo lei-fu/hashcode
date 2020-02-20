@@ -35,7 +35,7 @@ def sort_libs(libs, input, isVisited, day):
                     break
         l.score = score 
 
-    return sorted(libs, key=lambda lib: 1.0*lib.limits*lib.score/lib.duration, reverse=True)
+    return sorted(libs, key=lambda lib: 1.0*lib.score/lib.duration, reverse=True)
 
 def main():
     input = Input_reader(sys.argv[1])

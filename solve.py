@@ -3,8 +3,7 @@ import json
 
 from .score import Car, Score, Ride, check_ride_ids, check_vehicles, eval_ride
 
-
-    def read_input(self):
+def read_input(self):
         with open(self.input_str, 'r') as f:
             first_line = f.readline()
 
